@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemCount from "./ItemCount";
-import { getData } from "../js-components/data";
+import { getData } from "../js-components/products";
 import ItemList from './ItemList'
 
 const ItemListContainer= () => {
