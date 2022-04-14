@@ -10,32 +10,34 @@ const ItemDetail = ({ item }) => {
     return (
         <>
         {
-                <CardGroup>
-                    <Card key={item.id}>
-                        <CardImg
+            <div className="imagenes">
+        <CardGroup>
+            <Card key={item.id}>
+                <CardImg className="imagen"
                         alt="Card image cap"
-                        src={item.img[0]}
+                        src={item.img}
                         top
-                        width="100%"
-                        />
-                    <CardBody>
+                />
+                <CardBody>
                     <CardTitle tag="h5">
                         {item.nombre}
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
-                        tag="h6"
-                    >
+                        tag="h6">
                         {item.descripcion}
                     </CardSubtitle>
                     <CardText>
                         {item.precio}
+                    </CardText>
+                    <CardText>
                         {item.stock} unidades en stock
                     </CardText>
                     <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                    </CardBody>
-                </Card>
-                </CardGroup>
+                </CardBody>
+            </Card>
+        </CardGroup>
+        </div>
         }
         </>
     );

@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavBar/>
-      {/*ItemListContainer greeting="Hola mundo ItemListContainer" />*/}
+      {/* <ItemListContainer greeting="Hola mundo ItemListContainer" /> */}
       <ItemDetailContainer />
     </div>
   );

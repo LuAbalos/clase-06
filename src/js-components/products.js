@@ -1,10 +1,10 @@
-const products = [
+export const products = [
     {
       id: 1,
       nombre: "Pads",
       descripcion: "Limpieza facial, hechos con hilo de algodón",
       precio: "$100",
-      img: "..../public/img/pads.jpg",
+      img: "img/pads.jpg",
       stock: "80"
     },
     {
@@ -12,7 +12,7 @@ const products = [
       nombre: "Esponja",
       descripcion: "Limpieza corporal, hecho con hilo de algodón",
       precio: "$550",
-      img : "..../public/img/esponja.jpg",
+      img : "img/esponja.jpg",
       stock: "50"
     },
     {
@@ -20,7 +20,7 @@ const products = [
       nombre: "Bolsa jabonera",
       descripcion: "Limpieza corporal, hecho con yute",
       precio: "$340", 
-      img: "..../public/img/bolsajabonera.jpeg", 
+      img: "img/bolsaJabonera.jpg", 
       stock: "60"
     },
   ];
@@ -33,7 +33,5 @@ export const getData = () => {
     })
 }
 
-module.exports = {
-  products,
-}
+
 

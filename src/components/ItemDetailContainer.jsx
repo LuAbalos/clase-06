@@ -1,19 +1,22 @@
+import ItemDetail from "./ItemDetail"
 import { useEffect, useState } from "react";
-const {customFetch} = require ('../js-components/customFetch')
-import ItemDetail from "./ItemDetail";
-const {products} = require ('../js-components/products')
+import customFetch from "../js-components/customFetch"
+import {products} from '../js-components/products'
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState ({});
-
+console.log (products)
     useEffect (() => {
-        customFetch (2000, products [2])
-            .then(result => setDato(result))
-            .catch(err => console.log(err))   
+        customFetch(
+            2000,
+            products)
+          
+            .then((result) => setDato(result[2]))
+            .catch((err) => console.log(err)); 
     }, []);
-
+console.log(dato)
     return (
-        <ItemDetail item={dato} />
+      <ItemDetail item={dato} />
     );
 }
 

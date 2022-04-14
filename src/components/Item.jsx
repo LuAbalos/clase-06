@@ -4,7 +4,7 @@ import {CardGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, B
 export default function Item ({id, nombre, descripcion, precio, img  }) {
     
     return (
-        <div>
+        <div className="imagenes">
         <CardGroup>
             <Card key={id}>
                 <CardImg

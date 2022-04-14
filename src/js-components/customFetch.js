@@ -1,13 +1,14 @@
-let is_ok= true
-
-const {products} = require ("./products") 
-
-export const customFetch= () => {
-    return new Promise ((resolve, reject) => {
-        if(is_ok){
-            resolve(products);
-        }else{
-            reject("ko");
-        }
-    })
+const customFetch = (time, data) => {
+  return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+          if(true) {
+              resolve(data);
+          } else {
+              reject("Error al traer data de productos")
+          }
+      }, time)
+  });
 }
+
+export default customFetch;
+

@@ -15,9 +15,14 @@ const ItemListContainer= () => {
   pedirDatos()
   }, [])
 
+  function onAdd (c) {
+    alert(`se agregó ${c} productos`)
+  }
+
   return (
     <>
       <ItemList productos={productosDeHigiene} />
+      <ItemCount stock ={5} initial={1} onAdd= {onAdd} />
     </>
   );
 }
